@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #213555;
+  color: whitesmoke;
+}
+
+body .to-do {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+}
+
+.to-do h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.to-do .input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.to-do .input #add {
+  background-color: #d8c4b6;
+  border: solid 1px;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.to-do input {
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  width: 70%;
+  max-width: 300px;
+}
+
+#listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+  gap: 1rem;
+}
+
+#listContainer .list-item {
+  background-color: aliceblue;
+  color: #213555;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 500px;
+  gap: 0.5rem;
+}
+
+.list-item p {
+  margin: 0;
+  flex: 1;
+  text-align: left;
+}
+
+.list-item .items-btns {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.items-btns .edit,
+.items-btns .delete,
+.items-btns .mark {
+  border: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.items-btns .edit {
+  background-color: #213555;
+  color: whitesmoke;
+}
+
+.items-btns .delete {
+  background-color: #d8c4b6;
+}
+
+.items-btns .mark {
+  background-color: #4da1a9;
+  color: whitesmoke;
+}
+
+@media (max-width: 768px) {
+  body .to-do {
+    padding: 1rem;
+  }
+
+  .to-do .input {
+    gap: 0.5rem;
+    flex-direction: column;
+  }
+
+  .to-do input {
+    width: 90%;
+  }
+
+  #listContainer .list-item {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .to-do h1 {
+    font-size: 1.5rem;
+  }
+
+  .to-do input {
+    width: 100%;
+  }
+
+  .to-do .input #add {
+    width: 100%;
+    padding: 0.5rem;
+  }
+
+  #listContainer .list-item {
+    padding: 0.75rem;
+    gap: 0.25rem;
+  }
+
+  .items-btns .edit,
+  .items-btns .delete,
+  .items-btns .mark {
+    padding: 0.3rem;
+  }
+}
